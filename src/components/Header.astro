@@ -3,16 +3,17 @@
     <div class="header-content">
       <div class="logo">
         <a href="/">
-          <img src="/assets/logo_horizontal.svg" alt="Nolab" height="40" loading="lazy">
+          <img src="/assets/logo_horizontal.svg" alt="脳活ラボ" height="40" loading="lazy">
         </a>
       </div>
       <nav>
         <ul>
-          <li><a href="#concept">コンセプト</a></li>
-          <li><a href="#features">特徴</a></li>
-          <li><a href="#vision">ビジョン</a></li>
-          <li><a href="#company">会社概要</a></li>
-          <li><a href="#contact" class="button">お問い合わせ</a></li>
+          <li><a href="#features">機能</a></li>
+          <li><a href="#benefits">メリット</a></li>
+          <li><a href="#howto">使い方</a></li>
+          <li><a href="#testimonials">お客様の声</a></li>
+          <li><a href="#contact" class="button contact-button">お問い合わせ</a></li>
+          <li><a href="#download" class="button download-button">無料ダウンロード</a></li>
         </ul>
         <button class="mobile-menu-button" aria-label="メニュー">
           <span></span>
@@ -95,7 +96,15 @@
   }
 
   nav a.button {
-    margin: 0.5rem 1rem;
+    margin: 0.5rem 0.5rem;
+  }
+  
+  nav a.download-button {
+    background-color: var(--color-indigo);
+  }
+  
+  nav a.download-button:hover {
+    background-color: var(--color-gold);
   }
 
   .mobile-menu-button {
