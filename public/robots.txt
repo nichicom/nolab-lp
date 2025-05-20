@@ -1,0 +1,6 @@
+# robots.txt for www.nolab.tokyo
+# Sitemaps help search engines discover content efficiently
+User-agent: *
+Disallow:
+
+Sitemap: https://www.nolab.tokyo/sitemap-index.xml

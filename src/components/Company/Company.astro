@@ -1,0 +1,323 @@
+<section id="company" class="company">
+  <div class="company-background"></div>
+  <div class="container">
+    <h2 class="section-title">
+      <span class="title-decoration">製品概要</span>
+    </h2>
+    <div class="company-content">
+      <div class="company-intro">
+        <p>
+          ...
+        </p>
+      </div>
+
+      <div class="company-mission">
+        <h3>タイトル</h3>
+        <p class="mission-statement">「サブタイトル」</p>
+        <p>
+          ...
+        </p>
+      </div>
+
+      <div class="company-values">
+        <h3>機能</h3>
+        <ul class="value-list">
+          <li>
+            <h4>AAA</h4>
+            <p>BBB</p>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="company-projects">
+        <h3>導入事例</h3>
+        <div class="project-card">
+          <h4>〇〇区</h4>
+          <p>...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .company {
+    position: relative;
+    padding: 3rem 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f0f2f5, white);
+  }
+
+  .company-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 30%),
+      radial-gradient(circle at 20% 80%, rgba(15, 76, 129, 0.1) 0%, transparent 30%);
+    z-index: -1;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .title-decoration {
+    position: relative;
+    display: inline-block;
+  }
+
+  .title-decoration::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-indigo), var(--color-gold));
+  }
+
+  .company-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .company-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .company-mission h3,
+  .company-values h3,
+  .company-projects h3,
+  .company-info h3 {
+    color: var(--color-indigo);
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+  }
+
+  .mission-statement {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-indigo);
+    margin-bottom: 1rem;
+  }
+
+  .value-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .value-list li {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .value-list li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-indigo), var(--color-gold));
+  }
+
+  .value-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .value-list h4 {
+    color: var(--color-indigo);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .project-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-indigo), var(--color-gold));
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-card h4 {
+    color: var(--color-indigo);
+    margin-bottom: 1rem;
+  }
+
+  .project-tagline {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .project-subheading {
+    color: var(--color-indigo);
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-list {
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .info-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .info-list::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-indigo), var(--color-gold));
+  }
+
+  .info-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .info-item dt {
+    font-weight: 700;
+    color: var(--color-indigo);
+  }
+
+  @media (min-width: 481px) {
+    .section-title {
+      margin-bottom: 2.5rem;
+      font-size: 2rem;
+    }
+
+    .company-mission h3,
+    .company-values h3,
+    .company-projects h3,
+    .company-info h3 {
+      font-size: 1.6rem;
+    }
+
+    .mission-statement {
+      font-size: 1.5rem;
+    }
+
+    .value-list h4 {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .company {
+      padding: 6rem 0;
+    }
+
+    .company-background {
+      background-image:
+        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(15, 76, 129, 0.1) 0%, transparent 50%);
+    }
+
+    .section-title {
+      margin-bottom: 3rem;
+      font-size: 2.2rem;
+    }
+
+    .title-decoration::after {
+      bottom: -10px;
+    }
+
+    .company-content {
+      gap: 4rem;
+    }
+
+    .company-intro p {
+      font-size: 1.2rem;
+    }
+
+    .company-mission h3,
+    .company-values h3,
+    .company-projects h3,
+    .company-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .mission-statement {
+      font-size: 1.6rem;
+    }
+
+    .value-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .value-list h4 {
+      font-size: 1.3rem;
+    }
+
+    .info-list {
+      padding: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .value-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .company-content {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+  }
+</style>
