@@ -98,11 +98,11 @@
   nav a.button {
     margin: 0.5rem 0.5rem;
   }
-  
+
   nav a.download-button {
     background-color: var(--color-indigo);
   }
-  
+
   nav a.download-button:hover {
     background-color: var(--color-gold);
   }
@@ -173,11 +173,17 @@
   document.querySelectorAll('nav ul a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      navMenu.classList.remove('active');
-      const target = document.querySelector(link.getAttribute('href'));
+      if (navMenu) {
+        navMenu.classList.remove('active');
+      }
+      const href = link.getAttribute('href');
+      if (!href) return;
+      const target = document.querySelector(href);
       if (!target) return;
-      const headerHeight = document.querySelector('header').offsetHeight;
-      const topPos = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      const header = document.querySelector('header');
+      if (!header) return;
+      const headerHeight = header.offsetHeight;
+      const topPos = target.getBoundingClientRect().top + window.scrollY - headerHeight;
       window.scrollTo({ top: topPos, behavior: 'smooth' });
     });
   });
