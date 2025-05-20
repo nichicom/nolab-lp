@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "nolab-tokyo",
+    "prod": "nolab-tokyo"
+  },
+  "targets": {
+    "nolab-tokyo": {
+      "hosting": {
+        "lp": [
+          "lp-nolab-tokyo"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
