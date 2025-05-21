@@ -5,14 +5,16 @@
   <div class="container">
     <div class="download-content">
       <h2>今すぐ脳活ラボを始めよう</h2>
-      <p>無料ダウンロードで、健康維持と地域活性化の一歩を踏み出しましょう。</p>
-      <div class="app-buttons">
-        <a href="#" class="app-button">
-          <img src="/assets/app-store-badge.svg" alt="App Storeからダウンロード" loading="lazy">
-        </a>
-        <a href="#" class="app-button">
-          <img src="/assets/google-play-badge.svg" alt="Google Playからダウンロード" loading="lazy">
-        </a>
+      <p>LINE公式アカウントと友だちになって、健康維持と地域活性化の一歩を踏み出しましょう。</p>
+      <div class="line-content">
+        <div class="line-qr">
+          <img src="https://qr-official.line.me/gs/M_276ciuht_GW.png?oat_content=qr" alt="LINE友だち追加QRコード" loading="lazy">
+        </div>
+        <div class="line-button">
+          <a href="https://lin.ee/z81RVwD" target="_blank" rel="noopener noreferrer">
+            <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0">
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -43,31 +45,39 @@
     opacity: 0.9;
   }
 
-  .app-buttons {
+  .line-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
-  .app-button {
+  .line-qr {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
     display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .line-qr img {
+    width: 180px;
+    height: auto;
+  }
+
+  .line-button {
     transition: transform 0.3s ease;
   }
 
-  .app-button:hover {
+  .line-button:hover {
     transform: translateY(-5px);
   }
 
-  .app-button img {
-    height: 50px;
-    width: auto;
-  }
-
   @media (min-width: 481px) {
-    .app-buttons {
+    .line-content {
       flex-direction: row;
       justify-content: center;
+      align-items: center;
     }
   }
 
@@ -81,8 +91,8 @@
       margin-bottom: 2.5rem;
     }
 
-    .app-button img {
-      height: 60px;
+    .line-qr img {
+      width: 200px;
     }
   }
 </style>
