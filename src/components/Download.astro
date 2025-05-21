@@ -2,10 +2,29 @@
 ---
 
 <section id="download" class="download">
-  <div class="container">
-    <div class="download-content">
-      <h2>今すぐ脳活ラボを始めよう</h2>
-      <p>LINE公式アカウントと友だちになって、健康維持と地域活性化の一歩を踏み出しましょう。</p>
+  <div class="town-silhouette">
+    <!-- Town silhouette elements -->
+    <div class="building building-1"></div>
+    <div class="building building-2"></div>
+    <div class="building building-3"></div>
+    <div class="building building-4"></div>
+    <div class="building building-5"></div>
+    <div class="building building-6"></div>
+    <div class="building building-7"></div>
+    <div class="tree tree-1"></div>
+    <div class="tree tree-2"></div>
+    <div class="tree tree-3"></div>
+    <div class="penguin penguin-1"></div>
+    <div class="penguin penguin-2"></div>
+  </div>
+  
+  <div class="speech-bubble">
+    <h2>今すぐ脳活ラボを始めよう</h2>
+    <p>LINE公式アカウントと友だちになって、健康維持と地域活性化の一歩を踏み出しましょう。</p>
+  </div>
+  
+  <div class="qr-section">
+    <div class="container">
       <div class="line-content">
         <div class="line-qr">
           <img src="https://qr-official.line.me/gs/M_276ciuht_GW.png?oat_content=qr" alt="LINE友だち追加QRコード" loading="lazy">
@@ -22,27 +41,151 @@
 
 <style>
   .download {
-    background-color: var(--color-indigo);
-    color: white;
-    padding: 4rem 0;
+    position: relative;
     text-align: center;
+    padding: 0;
+    margin-top: 4rem;
   }
 
-  .download-content {
-    max-width: 800px;
+  /* Town silhouette styles */
+  .town-silhouette {
+    height: 80px;
+    background-color: #e91e63 !important; /* Pink color matching reference */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .building {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .building-1 {
+    height: 40px;
+    width: 30px;
+    left: 5%;
+  }
+
+  .building-2 {
+    height: 60px;
+    width: 40px;
+    left: 15%;
+  }
+
+  .building-3 {
+    height: 35px;
+    width: 35px;
+    left: 25%;
+  }
+
+  .building-4 {
+    height: 50px;
+    width: 30px;
+    left: 40%;
+  }
+
+  .building-5 {
+    height: 45px;
+    width: 35px;
+    right: 35%;
+  }
+
+  .building-6 {
+    height: 55px;
+    width: 40px;
+    right: 20%;
+  }
+
+  .building-7 {
+    height: 35px;
+    width: 30px;
+    right: 5%;
+  }
+
+  .tree {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    border-radius: 50% 50% 0 0;
+  }
+
+  .tree-1 {
+    left: 35%;
+    width: 20px;
+    height: 30px;
+  }
+
+  .tree-2 {
+    right: 30%;
+    width: 20px;
+    height: 30px;
+  }
+
+  .tree-3 {
+    left: 60%;
+    width: 20px;
+    height: 30px;
+  }
+
+  .penguin {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    border-radius: 50% 50% 0 0;
+  }
+
+  .penguin-1 {
+    left: 10%;
+    width: 25px;
+    height: 30px;
+  }
+
+  .penguin-2 {
+    right: 10%;
+    width: 25px;
+    height: 30px;
+  }
+
+  /* Speech bubble styles */
+  .speech-bubble {
+    background-color: #e91e63 !important; /* Pink color matching reference */
+    color: white;
+    padding: 2rem 1rem 3rem;
+    position: relative;
+    max-width: 100%;
     margin: 0 auto;
   }
 
-  .download h2 {
+  .speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #e91e63 !important; /* Pink color matching reference */
+  }
+
+  .speech-bubble h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: white;
   }
 
-  .download p {
+  .speech-bubble p {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
     opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* QR section styles */
+  .qr-section {
+    background-color: white;
+    padding: 3rem 0;
   }
 
   .line-content {
@@ -50,6 +193,8 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   .line-qr {
@@ -90,13 +235,16 @@
   }
 
   @media (min-width: 769px) {
-    .download h2 {
+    .town-silhouette {
+      height: 100px;
+    }
+
+    .speech-bubble h2 {
       font-size: 2.5rem;
     }
 
-    .download p {
+    .speech-bubble p {
       font-size: 1.25rem;
-      margin-bottom: 2.5rem;
     }
 
     .line-qr img {
