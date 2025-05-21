@@ -54,15 +54,23 @@
 
   .line-qr {
     background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
+    padding: 0.8rem;
+    border-radius: 16px;
     display: inline-block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: perspective(800px) rotateX(5deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .line-qr:hover {
+    transform: perspective(800px) rotateX(0);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
   .line-qr img {
-    width: 180px;
+    width: 150px;
     height: auto;
+    border-radius: 8px;
   }
 
   .line-button {
@@ -92,7 +100,7 @@
     }
 
     .line-qr img {
-      width: 200px;
+      width: 160px;
     }
   }
 </style>
