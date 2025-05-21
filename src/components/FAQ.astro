@@ -1,0 +1,153 @@
+---
+const faqs = [
+  {
+    question: "脳活ラボはどんなアプリですか？",
+    answer: "脳活ラボは、日々の脳トレーニングを通じて認知機能の維持・向上を目指すアプリです。同時に、アプリ内で獲得したポイントを地域で活用できる仕組みを取り入れ、地域活性化にも貢献します。"
+  },
+  {
+    question: "どのような脳トレゲームがありますか？",
+    answer: "記憶力、判断力、計算力、注意力など様々な認知機能を鍛えるゲームを多数用意しています。医師や専門家の監修のもと、効果的なトレーニングメニューを構成しています。"
+  },
+  {
+    question: "ポイントはどのように貯まりますか？",
+    answer: "毎日の脳トレーニングの実施や、特定の目標達成時にポイントが付与されます。継続的に取り組むことで、より多くのポイントを獲得できます。"
+  },
+  {
+    question: "貯めたポイントはどのように使えますか？",
+    answer: "地域の協力店舗や施設でサービスや商品と交換できます。また、地域のイベントへの参加券としても活用できる場合があります。"
+  },
+  {
+    question: "個人情報やデータはどのように扱われますか？",
+    answer: "ユーザーの個人情報は厳重に保護され、トレーニングデータは匿名化した上で、地域の健康増進施策の参考データとしてのみ活用されます。"
+  }
+];
+---
+
+<section id="faq" class="faq">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="title-decoration">よくある質問</span>
+    </h2>
+    <div class="faq-container">
+      {faqs.map((faq, index) => (
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>{faq.question}</h3>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    background-color: #f8f9fa;
+    position: relative;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .title-decoration {
+    position: relative;
+    display: inline-block;
+  }
+
+  .title-decoration::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-indigo), #367770, var(--color-gold));
+  }
+
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .faq-question {
+    padding: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-indigo);
+    font-weight: 600;
+  }
+
+  .faq-toggle {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    transition: transform 0.3s ease;
+  }
+
+  .faq-answer {
+    padding: 0 1.2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  .faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 1.2rem 1.2rem;
+    max-height: 500px;
+  }
+
+  @media (min-width: 769px) {
+    .section-title {
+      margin-bottom: 3rem;
+      font-size: 2.2rem;
+    }
+
+    .title-decoration::after {
+      bottom: -10px;
+    }
+
+    .faq-question h3 {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      if (question) {
+        question.addEventListener('click', () => {
+          item.classList.toggle('active');
+        });
+      }
+    });
+  });
+</script>

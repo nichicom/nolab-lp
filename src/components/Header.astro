@@ -3,16 +3,17 @@
     <div class="header-content">
       <div class="logo">
         <a href="/">
-          <img src="/assets/logo_horizontal.svg" alt="Nolab" height="40" loading="lazy">
+          <img src="/assets/logo_horizontal.svg" alt="脳活ラボ" height="40" loading="lazy">
         </a>
       </div>
       <nav>
         <ul>
-          <li><a href="#concept">コンセプト</a></li>
-          <li><a href="#features">特徴</a></li>
-          <li><a href="#vision">ビジョン</a></li>
-          <li><a href="#company">会社概要</a></li>
-          <li><a href="#contact" class="button">お問い合わせ</a></li>
+          <li><a href="#features">できること</a></li>
+          <li><a href="#benefits">効果</a></li>
+          <li><a href="#howto">使い方</a></li>
+          <li><a href="#testimonials">利用者の声</a></li>
+          <li><a href="#contact" class="button contact-button">お問い合わせ</a></li>
+          <li><a href="#download" class="button download-button">はじめる</a></li>
         </ul>
         <button class="mobile-menu-button" aria-label="メニュー">
           <span></span>
@@ -95,7 +96,26 @@
   }
 
   nav a.button {
-    margin: 0.5rem 1rem;
+    margin: 0.5rem 0.5rem;
+  }
+
+  nav a.contact-button {
+    background-color: transparent;
+    color: var(--color-indigo);
+    border: 2px solid var(--color-indigo);
+  }
+
+  nav a.contact-button:hover {
+    background-color: rgba(0, 66, 153, 0.1);
+  }
+
+  nav a.download-button {
+    background-color: var(--color-gold);
+    color: white;
+  }
+
+  nav a.download-button:hover {
+    background-color: #1a7a3e;
   }
 
   .mobile-menu-button {
@@ -164,11 +184,17 @@
   document.querySelectorAll('nav ul a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      navMenu.classList.remove('active');
-      const target = document.querySelector(link.getAttribute('href'));
+      if (navMenu) {
+        navMenu.classList.remove('active');
+      }
+      const href = link.getAttribute('href');
+      if (!href) return;
+      const target = document.querySelector(href);
       if (!target) return;
-      const headerHeight = document.querySelector('header').offsetHeight;
-      const topPos = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      const header = document.querySelector('header');
+      if (!header) return;
+      const headerHeight = header.offsetHeight;
+      const topPos = target.getBoundingClientRect().top + window.scrollY - headerHeight;
       window.scrollTo({ top: topPos, behavior: 'smooth' });
     });
   });
