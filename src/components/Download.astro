@@ -3,19 +3,7 @@
 
 <section id="download" class="download">
   <div class="town-silhouette">
-    <!-- Town silhouette elements -->
-    <div class="building building-1"></div>
-    <div class="building building-2"></div>
-    <div class="building building-3"></div>
-    <div class="building building-4"></div>
-    <div class="building building-5"></div>
-    <div class="building building-6"></div>
-    <div class="building building-7"></div>
-    <div class="tree tree-1"></div>
-    <div class="tree tree-2"></div>
-    <div class="tree tree-3"></div>
-    <div class="penguin penguin-1"></div>
-    <div class="penguin penguin-2"></div>
+    <!-- Empty town silhouette - shapes removed as requested -->
   </div>
   
   <div class="speech-bubble">
@@ -44,113 +32,20 @@
     position: relative;
     text-align: center;
     padding: 0;
-    margin-top: 4rem;
+    margin-top: 0; /* Removed top margin to eliminate white space */
   }
 
   /* Town silhouette styles */
   .town-silhouette {
     height: 80px;
-    background-color: #e91e63 !important; /* Pink color matching reference */
+    background-color: #004299 !important; /* Primary blue color */
     position: relative;
     overflow: hidden;
   }
 
-  .building {
-    position: absolute;
-    bottom: 0;
-    background-color: white;
-    border-radius: 2px 2px 0 0;
-  }
-
-  .building-1 {
-    height: 40px;
-    width: 30px;
-    left: 5%;
-  }
-
-  .building-2 {
-    height: 60px;
-    width: 40px;
-    left: 15%;
-  }
-
-  .building-3 {
-    height: 35px;
-    width: 35px;
-    left: 25%;
-  }
-
-  .building-4 {
-    height: 50px;
-    width: 30px;
-    left: 40%;
-  }
-
-  .building-5 {
-    height: 45px;
-    width: 35px;
-    right: 35%;
-  }
-
-  .building-6 {
-    height: 55px;
-    width: 40px;
-    right: 20%;
-  }
-
-  .building-7 {
-    height: 35px;
-    width: 30px;
-    right: 5%;
-  }
-
-  .tree {
-    position: absolute;
-    bottom: 0;
-    background-color: white;
-    border-radius: 50% 50% 0 0;
-  }
-
-  .tree-1 {
-    left: 35%;
-    width: 20px;
-    height: 30px;
-  }
-
-  .tree-2 {
-    right: 30%;
-    width: 20px;
-    height: 30px;
-  }
-
-  .tree-3 {
-    left: 60%;
-    width: 20px;
-    height: 30px;
-  }
-
-  .penguin {
-    position: absolute;
-    bottom: 0;
-    background-color: white;
-    border-radius: 50% 50% 0 0;
-  }
-
-  .penguin-1 {
-    left: 10%;
-    width: 25px;
-    height: 30px;
-  }
-
-  .penguin-2 {
-    right: 10%;
-    width: 25px;
-    height: 30px;
-  }
-
   /* Speech bubble styles */
   .speech-bubble {
-    background-color: #e91e63 !important; /* Pink color matching reference */
+    background-color: #004299 !important; /* Primary blue color */
     color: white;
     padding: 2rem 1rem 3rem;
     position: relative;
@@ -166,7 +61,7 @@
     transform: translateX(-50%);
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #e91e63 !important; /* Pink color matching reference */
+    border-top: 20px solid #004299 !important; /* Primary blue color */
   }
 
   .speech-bubble h2 {
