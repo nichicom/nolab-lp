@@ -2,7 +2,7 @@
 const features = [
   {
     title: "イベント検索・受付",
-    description: "地域で開催される介護予防・認知症予防イベントを簡単に検索可能。イベント受付機能により各事業を横断したイベント参加履歴も容易に管理できます。",
+    description: "地域で開催される介護予防・認知症予防イベントを簡単に検索可能。イベント情報のマスター管理とイベント受付機能により、各事業の参加履歴を包括的に管理できます。",
     icon: "🗓️"
   },
   {
@@ -11,26 +11,63 @@ const features = [
     icon: "☑️"
   },
   {
-    title: "予防プログラム",
-    description: "介護予防・認知症予防に有効な脳トレ問題や動画など既存コンテンツをメニューに追加し、良質な情報を高齢者のスマホに届けられます。実施結果の履歴管理により各プログラムの利用状況も把握できます。",
+    title: "動画配信",
+    description: "フレイルや認知症予防に関する啓発動画、体操のレッスン動画など、既存の動画コンテンツをメニューに追加できます。理解促進が重要な情報をわかりやすく届けられます。",
+    icon: "📺"
+  },
+  {
+    title: "脳トレ",
+    description: "認知機能の向上に有効な脳トレ問題やゲームなど、既存の脳トレコンテンツをメニューに追加できます。自分のペースで楽しみながら脳トレに取り組めます。",
     icon: "🧠"
   },
   {
     title: "デジタルスタンプラリー",
     description: "介護予防・認知症予防で特に有効なのが日々歩くこと。地域のおすすめスポットをマスター管理し、デジタルスタンプラリーにすることで、楽しくウォーキングを継続できます。",
     icon: "🚩"
+  }
+];
+
+const features2 = [
+　{
+    title: "励ましメッセージ",
+    description: "各予防プログラムの実施後には、励ましメッセージや獲得ポイントがLINEのトークに届き、達成感を得られます。",
+    icon: "🙌"
   },
   {
+    title: "おすすめ通知",
+    description: "脳活ラボの活動実績や地区・年齢等の属性に応じて、おすすめプログラムを自動配信できます。自身に有効なプログラムを定期的に認知できます。",
+    icon: "👀"
+  },
+  {
+    title: "グループコミュニケーション",
+    description: "動画配信や脳トレには、グループ参加機能もあり、複数人で楽しく取り組めます。その他、スタンプラリー内のフォト投稿コンテストなど、社会参加を促進する機能も充実しています。",
+    icon: "🧑‍🤝‍🧑"
+  },
+　{
     title: "ポイントシステム",
-    description: "日々の継続利用や特定プログラムの成果達成でポイントが貯まります。貯めたポイントはアプリ内ショップやギフト券が当たる抽選券などに交換でき、ユーザーのやる気アップにつながります。",
+    description: "日々の継続利用や特定プログラムの成果達成でポイントが貯まります。貯めたポイントはアプリ内のアイテムやギフト券が当たる抽選券に交換でき、やる気アップにつながります。",
     icon: "🎁"
   },
   {
-    title: "住基連携オプション",
-    description: "各ユーザーのプロフィール登録情報を住基突合し、管轄区域の住民か否かの判別や利用制限が可能。不正利用を防止できます。※ご希望の場合にオプション追加となります。",
+    title: "ランキング",
+    description: "ニックネームで、ポイント獲得数やスタンプラリーのスタンプ数のランキング表示が可能。他ユーザーと予防活動の取り組み度合いを切磋琢磨でき、モチベーション維持に役立ちます。",
+    icon: "🔥"
+  },
+  {
+    title: "実績管理・平均比較",
+    description: "各予防プログラムの実績は履歴管理され、いつでも確認できます。さらに、体力測定やCognitraxの結果は、グラフ表示により厚生労働省基準の平均値との比較も容易です。",
+    icon: "✍️"
+  },
+];
+
+const features3 = [
+　{
+    title: "住基連携",
+    description: "各ユーザーのプロフィール情報を住基突合し、管轄区域の住民か否かの判別や利用制限ができます。住民に限定したサービス提供を可能とします。",
     icon: "💻"
   }
 ];
+
 
 ---
 
@@ -39,6 +76,7 @@ const features = [
     <h2 class="section-title">
       <span class="title-decoration">脳活ラボでできること</span>
     </h2>
+    <h3>【予防プログラム】</h3>
     <div class="features-grid">
       {features.map((feature, index) => (
         <div class="feature-card">
@@ -50,6 +88,40 @@ const features = [
     </div>
   </div>
 </section>
+
+
+<section id="features2" class="features">
+  <div class="container">
+  <h3>【習慣化サポート機能】</h3>
+    <div class="features-grid">
+      {features2.map((feature, index) => (
+        <div class="feature-card">
+          <div class="feature-icon">{feature.icon}</div>
+          <h3>{feature.title}</h3>
+          <p>{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+<section id="features3" class="features">
+  <div class="container">
+  <h3>【オプション】</h3>
+    <div class="features-grid">
+      {features3.map((feature, index) => (
+        <div class="feature-card">
+          <div class="feature-icon">{feature.icon}</div>
+          <h3>{feature.title}</h3>
+          <p>{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
 <style>
   .features {
