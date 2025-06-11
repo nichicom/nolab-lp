@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "clean": "git clean -xdf node_modules",
-    "scaffold": "scaffdog"
+    "scaffold": "scaffdog",
+    "deploy": "firebase deploy --only hosting"
   },
   "devDependencies": {
     "@astrojs/sitemap": "3.4.0",
